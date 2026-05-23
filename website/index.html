@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <title>Sanskrit TTS Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main class="container">
+
+        <section class="card intro-card">
+            <h1>
+                ShlokaDhara: A Multi-Speaker Sanskrit Speech Corpus
+                for Learning Meter-Aware Prosody in Text-to-Recitation
+            </h1>
+            <p class="abstract">
+                <strong>Abstract.</strong>
+                Sanskrit verse recitation follows Chandas, a prosodic framework defined by rhythmic patterns of Laghu
+                (light) and Guru (heavy) syllables. Existing Sanskrit speech datasets primarily support Automatic Speech
+                Recognition (ASR) or conventional Text-to-Speech (TTS) and do not explicitly model the metrical
+                structure required for verse recitation. We introduce ShlokaDhara, a multi-speaker Sanskrit speech
+                corpus for metrically-aware speech synthesis, containing over 43 hours of high-quality recitations from
+                19 speakers across diverse literary and devotional sources. The corpus spans multiple Chandas,
+                recitation styles, and melodic variations. We further propose Text-to-Recite, a synthesis task that
+                extends conventional TTS by emphasizing metrical fidelity, rhythmic consistency, and prosodic
+                correctness. Using ShlokaDhara, we benchmark several state-of-the-art multilingual TTS systems. Despite
+                the inherent complexity of Sanskrit verse recitation, which requires accurate pronunciation, Sandhi
+                preservation, and adherence to metrical structure, XTTS-V2 achieves the best perceptual quality with a
+                MOS of 4.01, indicating strong but still imperfect synthesis quality for this challenging task. We
+                further conduct a human evaluation of the Text-to-Recite task with 16 Sanskrit experts, assessing
+                pronunciation accuracy, Sandhi handling, and overall recitation quality. Our work establishes a
+                benchmark for prosody-aware Sanskrit speech synthesis and computational Sanskrit recitation.
+            </p>
+        </section>
+
+        <section class="card samples-card">
+            <h2>Samples</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Text</th>
+                        <th>XTTS-V2</th>
+                        <th>CLaM-TTS</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">पूतात्मा परमात्मा च मुक्तानां परमा गतिः ।अव्ययः पुरुषः साक्षी
+                                क्षेत्रज्ञोऽक्षर एव च ॥</p>
+                            <p class="meta">● MALE · ANUṢṬUBH</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad1.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad1.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">एवमुक्तो हृषीकेशो गुडाकेशेन भारत । सेनयोरुभयोर्मध्ये स्थापयित्वा
+                                रथोत्तमम् ॥</p>
+                            <p class="meta">● MALE · ANUṢṬUBH</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad2.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/02_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">शरण्यः साधूनां भव-भयभृतामुत्तमगुणो महावीर-स्वामी नयन-पथ-गामी भवतु मे।
+                            </p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad3.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/03_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">नमन्नाकेंद्राली-मुकुट-मणि-भा जाल जटिलं लसत्पादाम्भोज-द्वयमिह यदीयं
+                                तनुभृताम्‌।</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad4.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/04_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">जनपदे न गदः पदमादधावभिभवः कुत एव सपत्नजः । क्षितिरभुत्फलवत्यजनन्दने
+                                शमरतेऽमरतेजसि पार्थिवे ॥</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad5.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/05_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">दशदिगन्तजिता रघुणा यथा श्रियमपुष्यदजेन ततः परम्।</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad6.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/06_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">ऊर्ध्वमूलमधःशाखमश्वत्थं प्राहुरव्ययम् । छन्दांसि यस्य पर्णानि यस्तं वेद
+                                स वेदवित् ॥</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad7.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/07_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">महाक्रमो महाकर्मा महातेजा महोरगः। महाक्रतुर्महायज्वा महायज्ञो महाहविः ॥
+                            </p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad8.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/08_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">रामाय रामभद्राय रामचन्द्राय वेधसे ।रघुनाथाय नाथाय सीतायाः पतये नमः ॥</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad9.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/09_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">प्रभो शक्तिमन् हिन्दुराष्ट्राङ्गभूता इमे सादरं त्वां नमामो वयम्</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad10.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/10_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">त्रयीवेद्यं हृद्यं त्रिपुर हरमाद्यं त्रिनयनं जटाभारोदारं चलदुरगहारं
+                                मृगधरम्</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad11.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/11_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">कार्पण्यदोषोपहतस्वभावः पृच्छामि त्वां धर्मसम्मूढचेताः ।</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad12.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/12_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">इदं शरीरं कौन्तेय क्षेत्रमित्यभिधीयते एतद्यो वेत्ति तं प्राहु:
+                                क्षेत्रज्ञ इति तद्विद:</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad13.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/13_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">आषाढस्य प्रथमदिवसे मेघमाश्लिष्ट-सानुं वप्रक्रीडा- परिणतगज - प्रेक्षणीयं
+                                ददर्श</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad14.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/14_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">शुभ्रैरभ्रैरदभ्रैरुपरिविरचितैर्मुक्तपीयूषवर्षै- रानन्दी नः
+                                पुनीयादरिनलिनगदाशङ्खपाणिर्मुकुन्दः</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad15.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/15_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">तव सुप्रभातमरविन्द लोचने भवतु प्रसन्नमुख चन्द्रमण्डले विधि शङ्करेन्द्र
+                                वनिताभिरर्चिते</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad16.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/16_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">नित्यं पठामि जननि तव नाम स्तोत्रं नित्यं करोमि तव नामजपं विशुद्धे</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad17.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/17_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">तेषां प्रसन्नहृदये कुरु मङ्गलानि श्रीलक्ष्मि भक्तवरदे तव सुप्रभातम्</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad18.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/18_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">सद्भक्तरक्षणपरे हरिचित्तवासिन् श्रीलक्ष्मि भक्तवरदे तव सुप्रभातम्</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad19.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/19_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-cell">
+                            <p class="sanskrit">कर्पूरगौरं करुणावतारं संसारसारं भुजगेन्द्रहारम्। सदा वसन्तं हृदयारविन्दे
+                                भवं भवानीसहितं नमामि॥</p>
+                            <p class="meta">● FEMALE · INDRAVAJRĀ</p>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/ad20.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                        <td class="audio-cell">
+                            <audio controls controlsList="nodownload">
+                                <source src="audio/20_engentts.wav" type="audio/wav" />
+                            </audio>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+</body>
+
+</html>
